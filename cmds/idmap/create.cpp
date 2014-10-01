@@ -74,7 +74,7 @@ fail:
                 fprintf(stderr, "error: write: %s\n", strerror(errno));
                 return -1;
             }
-            bytesLeft -= w;
+            bytesLeft -= static_cast<size_t>(w);
         }
         return 0;
     }
@@ -92,7 +92,7 @@ fail:
         }
 
         char buf[N];
-        ssize_t bytesLeft = N;
+        size_t bytesLeft = N;
         if (lseek(idmap_fd, SEEK_SET, 0) < 0) {
             return true;
         }
@@ -101,7 +101,7 @@ fail:
             if (r < 0) {
                 return true;
             }
-            bytesLeft -= r;
+            bytesLeft -= static_cast<size_t>(r);
             if (bytesLeft == 0) {
                 break;
             }
