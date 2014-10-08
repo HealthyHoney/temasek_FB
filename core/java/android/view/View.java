@@ -20437,7 +20437,7 @@ public class View implements Drawable.Callback, KeyEvent.Callback,
         /**
          * Last global system UI visibility reported by the window manager.
          */
-        int mGlobalSystemUiVisibility;
+        int mGlobalSystemUiVisibility = -1;
 
         /**
          * True if a view in this hierarchy has an OnSystemUiVisibilityChangeListener
