@@ -987,7 +987,7 @@ public final class BatteryService extends SystemService {
                     || status == BatteryManager.BATTERY_STATUS_FULL) {
                 mBatteryLight.setModes(mNotificationLedBrightnessLevel,
                         mMultipleLedsEnabled);
-                if (status == BatteryManager.BATTERY_STATUS_FULL || level >= 90) {
+                if (status == BatteryManager.BATTERY_STATUS_FULL || level >= 95) {
                     if (level == 100) {
                         // Battery is really full
                         mBatteryLight.setColor(mBatteryReallyFullARGB);
