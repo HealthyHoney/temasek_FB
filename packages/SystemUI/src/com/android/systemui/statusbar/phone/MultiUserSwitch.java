@@ -98,6 +98,9 @@ public class MultiUserSwitch extends FrameLayout implements View.OnClickListener
                 intent = ContactsContract.QuickContact.composeQuickContactsIntent(
                         getContext(), v, ContactsContract.Profile.CONTENT_URI,
                         ContactsContract.QuickContact.MODE_LARGE, null);
+                if (mQsPanel != null) {
+                    mQsPanel.getHost().collapsePanels();
+                }
             } else {
                 intent = new Intent(Intent.ACTION_INSERT, ContactsContract.Contacts.CONTENT_URI);
                 intent.putExtra(INTENT_EXTRA_NEW_LOCAL_PROFILE, true);
