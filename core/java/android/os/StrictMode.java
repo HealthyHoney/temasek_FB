@@ -1755,9 +1755,9 @@ public final class StrictMode {
                 // we currently are maintaining for this thread.
                 // First, drain the remaining violations from the parcel.
                 try {
-                    while (i < numViolations) {
+                    i++; // Skip the current entry.
+                    for (; i < numViolations; i++) {
                         info = new ViolationInfo(p, !currentlyGathering);
-                        i++;
                     }
                 } catch (IllegalStateException iex) {
                     // Parcel is the wrong one or is corrupted. Stop reading draining
