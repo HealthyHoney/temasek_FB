@@ -81,6 +81,7 @@ import com.android.internal.net.NetworkStatsFactory;
 import com.android.internal.util.Preconditions;
 import com.android.server.NativeDaemonConnector.Command;
 import com.android.server.NativeDaemonConnector.SensitiveArg;
+import com.android.server.NativeDaemonConnector.NativeDaemonFailureException;
 import com.android.server.net.LockdownVpnTracker;
 import com.google.android.collect.Maps;
 
@@ -957,6 +958,8 @@ public class NetworkManagementService extends INetworkManagementService.Stub
 
         try {
             mConnector.execute(cmd);
+        } catch (NativeDaemonFailureException e) {
+            Log.e(TAG, "Error receive a invalid event");
         } catch (NativeDaemonConnectorException e) {
             throw e.rethrowAsParcelableException();
         }
