@@ -7164,8 +7164,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     mBootMsgDialog.setCancelable(false);
                     mBootMsgDialog.show();
                 }
-                mBootMsgDialog.setMessage("Powered By arter97 optimizations\n\n" + msg
-                + "\n\ntemasek cm-12.1 unofficial build");
+                mBootMsgDialog.setMessage("Powered by arter97 optimizations\n\n" + msg
+                + "\n\ntemasek & zg85 CM 12.1 unofficial build");
             }
         });
     }
