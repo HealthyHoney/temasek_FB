@@ -214,7 +214,6 @@ public class KeyguardBouncer {
                 // only when the lock screen method is secure. Otherwise if we are in a 'trusted'
                 // mode or insecure, bypassing the bouncer is the same as disabling the keyguard.
                 return UNLOCK_SEQUENCE_BOUNCER_FIRST;
-            }
         }
         return UNLOCK_SEQUENCE_DEFAULT;
     }
