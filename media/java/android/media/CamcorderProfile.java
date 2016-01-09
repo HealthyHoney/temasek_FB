@@ -266,34 +266,34 @@ public class CamcorderProfile
      * Quality level corresponding to the 4k-DCI (4096 x 2160) resolution.
      * @hide
      */
-    public static final int QUALITY_4KDCI = 10001;
+    public static final int QUALITY_4KDCI = 10000;
 
     /**
      * Time lapse quality level corresponding to the 4k-DCI (4096 x 2160) resolution.
      * @hide
      */
-    public static final int QUALITY_TIME_LAPSE_4KDCI = 10003;
+    public static final int QUALITY_TIME_LAPSE_4KDCI = 10001;
 
     /**
      * High speed ( >= 100fps) quality level corresponding to the CIF (352 x 288)
      * @hide
      */
-    public static final int QUALITY_HIGH_SPEED_CIF = 10004;
+    public static final int QUALITY_HIGH_SPEED_CIF = 10002;
 
     /**
      * High speed ( >= 100fps) quality level corresponding to the VGA (640 x 480)
      * @hide
      */
-    public static final int QUALITY_HIGH_SPEED_VGA = 10005;
+    public static final int QUALITY_HIGH_SPEED_VGA = 10003;
 
     /**
      * High speed ( >= 100fps) quality level corresponding to the 4K-DCI (4096 x 2160)
      * @hide
      */
-    public static final int QUALITY_HIGH_SPEED_4KDCI = 10006;
+    public static final int QUALITY_HIGH_SPEED_4KDCI = 10004;
 
     // Start and end of vendor quality list
-    private static final int QUALITY_VENDOR_LIST_START = QUALITY_VGA;
+    private static final int QUALITY_VENDOR_LIST_START = QUALITY_4KDCI;
     private static final int QUALITY_VENDOR_LIST_END = QUALITY_HIGH_SPEED_4KDCI;
 
     /**
