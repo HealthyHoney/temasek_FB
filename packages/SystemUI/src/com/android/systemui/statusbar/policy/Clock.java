@@ -476,10 +476,10 @@ public class Clock implements DemoMode {
                 mClockView.setTypeface(Typeface.create("sans-serif-condensed", Typeface.ITALIC));
                 break;
             case FONT_CONDENSED_LIGHT:
-                setTypeface(Typeface.create("sans-serif-condensed-light", Typeface.NORMAL));
+                mClockView.setTypeface(Typeface.create("sans-serif-condensed-light", Typeface.NORMAL));
                 break;
             case FONT_CONDENSED_LIGHT_ITALIC:
-                setTypeface(Typeface.create("sans-serif-condensed-light", Typeface.ITALIC));
+                mClockView.setTypeface(Typeface.create("sans-serif-condensed-light", Typeface.ITALIC));
                 break;
             case FONT_CONDENSED_BOLD:
                 mClockView.setTypeface(Typeface.create("sans-serif-condensed", Typeface.BOLD));
@@ -494,10 +494,10 @@ public class Clock implements DemoMode {
                 mClockView.setTypeface(Typeface.create("sans-serif-medium", Typeface.ITALIC));
                 break;
             case FONT_BLACK:
-                setTypeface(Typeface.create("sans-serif-black", Typeface.NORMAL));
+                mClockView.setTypeface(Typeface.create("sans-serif-black", Typeface.NORMAL));
                 break;
             case FONT_BLACK_ITALIC:
-                setTypeface(Typeface.create("sans-serif-black", Typeface.ITALIC));
+                mClockView.setTypeface(Typeface.create("sans-serif-black", Typeface.ITALIC));
                 break;
         }
     }
