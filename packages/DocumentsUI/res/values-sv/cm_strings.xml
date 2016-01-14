@@ -16,5 +16,5 @@
      limitations under the License.
 -->
 <resources>
-  <string name="no_permission_for_drm">מצטערים, קבצים המוגנים ב-DRM אינם ניתנים לשיתוף</string>
+  <string name="no_permission_for_drm">Tyvärr, DRM-skyddade filer kan inte delas</string>
 </resources>
