@@ -145,11 +145,11 @@ public abstract class BaseStatusBar extends SystemUI implements
         RecentsComponent.Callbacks, ExpandableNotificationRow.ExpansionLogger,
         NotificationData.Environment {
     public static final String TAG = "StatusBar";
-    public static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
+    public static final boolean DEBUG = false;
     public static final boolean MULTIUSER_DEBUG = false;
 
     // STOPSHIP disable once we resolve b/18102199
-    private static final boolean NOTIFICATION_CLICK_DEBUG = true;
+    private static final boolean NOTIFICATION_CLICK_DEBUG = false;
 
     protected static final int MSG_SHOW_RECENT_APPS = 1019;
     protected static final int MSG_HIDE_RECENT_APPS = 1020;
