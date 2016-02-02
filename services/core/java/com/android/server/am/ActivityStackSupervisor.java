@@ -2211,8 +2211,7 @@ public final class ActivityStackSupervisor implements DisplayListener {
             if (targetStack.topRunningActivityLocked(null) == null)
                 targetStack.moveToFront("restartingTaskFromRecents");
             else
-                targetStack.moveTaskToFrontLocked(inTask, r, options, r.appTimeTracker,
-                    "inTaskToFront");
+                targetStack.moveTaskToFrontLocked(inTask, r, options, "inTaskToFront");
 
             // Check whether we should actually launch the new activity in to the task,
             // or just reuse the current activity on top.
