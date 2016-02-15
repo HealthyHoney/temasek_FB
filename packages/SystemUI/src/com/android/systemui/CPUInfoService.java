@@ -158,7 +158,7 @@ public class CPUInfoService extends Service {
         private String getCPUInfoString(int i) {
             String freq=mCurrFreq[i];
             String gov=mCurrGov[i];
-            return "cpu:"+i+" "+gov+":"+freq;
+            return "cpu"+i+": "+gov+": "+freq;
         }
 
         @Override
@@ -173,7 +173,7 @@ public class CPUInfoService extends Service {
 
             int y = mPaddingTop - (int)mAscent;
 
-            canvas.drawText("Temp:"+mCPUTemp, RIGHT-mPaddingRight-mMaxWidth,
+            canvas.drawText("temp: "+mCPUTemp, RIGHT-mPaddingRight-mMaxWidth,
                 y-1, mOnlinePaint);
             y += mFH;
 
