@@ -188,11 +188,8 @@ public class CPUInfoService extends Service {
                         canvas.drawText(s, RIGHT-mPaddingRight-mMaxWidth,
                             y-1, mOnlinePaint);
                     }
-                } else {
-                    canvas.drawText(s, RIGHT-mPaddingRight-mMaxWidth,
-                        y-1, mOfflinePaint);
-                }
                 y += mFH;
+                }
             }
         }
 
