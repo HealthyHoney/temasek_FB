@@ -82,6 +82,7 @@ public class NavigationBarView extends LinearLayout implements BaseStatusBar.Nav
     private OnTouchListener mRecentsPreloadListener;
     private OnTouchListener mHomeSearchActionListener;
     private OnLongClickListener mRecentsBackListener;
+    private OnClickListener mImmersiveClickListener;
 
     private OnLongClickListener mPowerListener = new View.OnLongClickListener() {
         @Override
@@ -958,11 +959,13 @@ public class NavigationBarView extends LinearLayout implements BaseStatusBar.Nav
     }
 
     void setListeners(OnClickListener recentsClickListener, OnTouchListener recentsPreloadListener,
-                      OnLongClickListener recentsBackListener, OnTouchListener homeSearchActionListener) {
+                      OnLongClickListener recentsBackListener, OnTouchListener homeSearchActionListener,
+                      OnClickListener immersiveClickListener) {
         mRecentsClickListener = recentsClickListener;
         mRecentsPreloadListener = recentsPreloadListener;
         mHomeSearchActionListener = homeSearchActionListener;
         mRecentsBackListener = recentsBackListener;
+        mImmersiveClickListener = immersiveClickListener;
         updateButtonListeners();
     }
 
@@ -999,6 +1002,10 @@ public class NavigationBarView extends LinearLayout implements BaseStatusBar.Nav
         if (powerView != null) {
             powerView.setLongClickable(true);
             powerView.setOnLongClickListener(mPowerListener);
+        }
+	View immersivetView = mCurrentView.findViewWithTag(NavbarEditor.NAVBAR_EXPAND);
+        if (immersivetView != null) {
+            immersivetView.setOnClickListener(mImmersiveClickListener);
         }
     }
 

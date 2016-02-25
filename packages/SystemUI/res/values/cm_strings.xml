@@ -305,6 +305,12 @@
     <string name="navbar_menu_big_button">Menu button</string>
     <string name="navbar_power_button">Power button</string>
 
+    <!-- Dialog title for navigation bar button selection -->
+    <string name="navbar_expand">Expanded Desktop</string>
+
+    <!-- Content description of the power button for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_expand">Expanded Desktop</string>
+
     <!-- Navigation ring shortcuts -->
     <string name="navigation_ring_title">Quick launch shortcuts</string>
     <string name="navring_target_reset_message">Delete all user created navigation bar shortcuts and restore to default?</string>
