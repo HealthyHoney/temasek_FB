@@ -128,7 +128,7 @@ public class Patterns {
      * RFC 1035 Section 2.3.4 limits the labels to a maximum 63 octets.
      */
     private static final String IRI
-        = "[" + GOOD_IRI_CHAR + "]([" + GOOD_IRI_CHAR + "\\-]{0,61}[" + GOOD_IRI_CHAR + "]){0,1}";
+        = "[" + GOOD_IRI_CHAR + "]([" + GOOD_IRI_CHAR + "\\-_~]{0,61}[" + GOOD_IRI_CHAR + "]){0,1}";
 
     private static final String GOOD_GTLD_CHAR =
         "a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF";
