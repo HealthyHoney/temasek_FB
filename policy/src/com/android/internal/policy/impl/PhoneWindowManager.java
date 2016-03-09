@@ -42,6 +42,8 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.ContentObserver;
+import android.graphics.drawable.AnimatedRotateDrawable;
+import android.graphics.drawable.Drawable;
 import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.hardware.input.InputManager;
@@ -110,6 +112,7 @@ import android.view.accessibility.AccessibilityManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import android.view.WindowManagerPolicyControl;
@@ -7172,6 +7175,16 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     mBootMsgDialog.getWindow().setAttributes(lp);
                     mBootMsgDialog.setCancelable(false);
                     mBootMsgDialog.show();
+
+                    // Reduce animation to 15 FPS to improve boot time
+                    ProgressBar spinner = (ProgressBar) mBootMsgDialog.findViewById(R.id.progress);
+                    if (spinner != null) {
+                        Drawable d = spinner.getIndeterminateDrawable();
+                        if (d != null && d instanceof AnimatedRotateDrawable) {
+                            AnimatedRotateDrawable ard = (AnimatedRotateDrawable) d;
+                            ard.setFramesDuration(66);
+                        }
+                    }
                 }
                 mBootMsgDialog.setMessage("Powered by arter97 optimizations\n\n" + msg
                 + "\n\ntemasek & zg85 CM 12.1 unofficial build");
