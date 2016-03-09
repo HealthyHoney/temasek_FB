@@ -601,6 +601,7 @@ public class OverScroller {
         private static final int BALLISTIC = 2;
 
         private final PowerManager mPm;
+        private boolean mBoosted = false;
 
         static {
             float x_min = 0.0f;
@@ -752,6 +753,8 @@ public class OverScroller {
             mDuration = mSplineDuration = 0;
             mStartTime = AnimationUtils.currentAnimationTimeMillis();
             mCurrentPosition = mStart = start;
+
+            mBoosted = false;
 
             if (start > max || start < min) {
                 startAfterEdge(start, min, max, velocity);
@@ -916,6 +919,11 @@ public class OverScroller {
             }
             if (currentTime > mDuration) {
                 return false;
+            }
+
+            if (!mBoosted) {
+                mBoosted = true;
+                mPm.cpuBoost(mDuration * 1000);
             }
 
             double distance = 0.0;
