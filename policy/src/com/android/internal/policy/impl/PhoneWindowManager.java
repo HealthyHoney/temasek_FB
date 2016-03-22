@@ -3312,7 +3312,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 // (The user is already on the InCallUI at this point,
                 // and his ONLY options are to answer or reject the call.)
                 TelecomManager telecomManager = getTelecommService();
-                if (telecomManager != null && telecomManager.isRinging()) {
+                if (telecomManager != null && telecomManager.isRinging()
+                                           && !(isScreenOn() && !isKeyguardShowingAndNotOccluded())) {
                     if ((mRingHomeBehavior
                             & Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER) != 0) {
                         Log.i(TAG, "Answering with HOME button.");
